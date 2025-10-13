@@ -17,7 +17,7 @@ class Service {
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
-                conf.appwriteBucketId,
+                conf.appwriteCollectionId,
                 slug,
                 {
                     title,
@@ -37,6 +37,7 @@ class Service {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
+                slug,
                 {
                     title,
                     content,
@@ -81,7 +82,6 @@ class Service {
             return this.databases.listDocuments(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
                 queries,
             )
         } catch (error) {
