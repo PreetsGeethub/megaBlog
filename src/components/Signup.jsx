@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import authService from '../appwrite/auth'
+import authService from '../appwrtie/auth.js'
 import {data, Link ,useNavigate} from 'react-router-dom'
 import {login} from '../store/authSlice'
 import {Button, Input, Logo} from './index.js'
